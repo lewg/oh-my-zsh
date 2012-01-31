@@ -8,6 +8,6 @@ if test "$VENDOR" = "apple"; then
 	alias lsusb='system_profiler SPUSBDataType'
 	
 	# Move windows Hi/Low (Vance)
-	alias hilo='osascript ~ZSH_CUSTOM/Hi-Low-Windows.scpt'
+	alias hilo='osascript ~ZSH_CUSTOM/Hi-Low-Windows.applescript'
 	
 fi
