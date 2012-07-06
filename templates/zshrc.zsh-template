@@ -42,6 +42,7 @@ eval "$(rbenv init -)"
 
 # don't autocorrect for knife
 alias knife='nocorrect knife'
+alias j='nocorrect j'
 
 # Are we on a mac?
 if test "$VENDOR" = "apple"; then
