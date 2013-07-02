@@ -32,7 +32,7 @@ ZSH_THEME="blinks"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm gem mysql autojump knife node npm)
+plugins=(git rvm gem mysql autojump knife node npm vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,16 +61,10 @@ if test "$VENDOR" = "apple"; then
 
 	# chef
 	export PATH="/opt/chef/bin:$PATH"
+	export WHARTON_CHEF_USER="lewg"
 
-	# EC2
-	export JAVA_HOME="$(/usr/libexec/java_home)"
-	export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
-	export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
-	export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.4.4.1/jars"
-	export EC2_KEYPAIR="APKAIR74EGFPSXIFWPMA" # name only, not the file name
-	export AWS_AUTO_SCALING_HOME="/usr/local/Cellar/auto-scaling/1.0.33.1/jars" 
-	export AWS_CLOUDWATCH_HOME="/usr/local/Library/LinkedKegs/cloud-watch/jars"
-	export SERVICE_HOME="$AWS_CLOUDWATCH_HOME"
+	# AWS
+	source /Library/Python/2.7/site-packages/awscli-0.7.0-py2.7.egg/EGG-INFO/scripts/zsh_complete.sh
 
 fi
 
