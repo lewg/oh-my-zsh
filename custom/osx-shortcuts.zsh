@@ -2,7 +2,7 @@
 if test "$VENDOR" = "apple"; then
 
 	# Flush DNS
-	alias flushdns="dscacheutil -flushcache"
+	alias flushdns="sudo killall -HUP mDNSResponder"
 
 	# LS USB
 	alias lsusb='system_profiler SPUSBDataType'
