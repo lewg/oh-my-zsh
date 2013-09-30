@@ -72,7 +72,7 @@ if test "$VENDOR" = "apple"; then
 	export WHARTON_CHEF_USER="lewg"
 
 	# AWS
-	source /Library/Python/2.7/site-packages/awscli-0.7.0-py2.7.egg/EGG-INFO/scripts/zsh_complete.sh
+	# source /Library/Python/2.7/site-packages/awscli-0.7.0-py2.7.egg/EGG-INFO/scripts/zsh_complete.sh
 
 fi
 
