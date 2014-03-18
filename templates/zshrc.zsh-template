@@ -81,3 +81,6 @@ if test "$VENDOR" = "apple"; then
 	# AWS
 	# source /Library/Python/2.7/site-packages/awscli-0.7.0-py2.7.egg/EGG-INFO/scripts/zsh_complete.sh
 
+fi
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/lew/.gvm/bin/gvm-init.sh" ]] && source "/Users/lew/.gvm/bin/gvm-init.sh"
