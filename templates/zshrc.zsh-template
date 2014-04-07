@@ -37,7 +37,7 @@ ZSH_THEME="blinks"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to the command execution time stamp shown 
+# Uncomment following line if you want to the command execution time stamp shown
 # in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
@@ -45,7 +45,7 @@ ZSH_THEME="blinks"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm gem mysql autojump knife node npm vagrant)
+plugins=(git rvm gem mysql autojump knife node npm vagrant python virtualenv virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,6 +80,11 @@ if test "$VENDOR" = "apple"; then
 
 	# AWS
 	# source /Library/Python/2.7/site-packages/awscli-0.7.0-py2.7.egg/EGG-INFO/scripts/zsh_complete.sh
+
+	# virtualenvwrapper
+	export WORKON_HOME="$HOME/.virtualenvs"
+	export PROJECT_HOME="$HOME/Projects/python"
+	source /usr/local/bin/virtualenvwrapper.sh
 
 fi
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
