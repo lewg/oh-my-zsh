@@ -48,20 +48,20 @@ ZSH_THEME="blinks"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm gem mysql autojump knife node npm vagrant python virtualenv virtualenvwrapper)
+plugins=(git rvm gem mysql autojump knife node npm vagrant python virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 # User configuration
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+
 
 # don't autocorrect for knife
 alias knife='nocorrect knife'
 alias j='nocorrect j'
+
+
 
 # Are we on a mac?
 if test "$VENDOR" = "apple"; then
@@ -82,11 +82,15 @@ if test "$VENDOR" = "apple"; then
 	# AWS
 	# source /Library/Python/2.7/site-packages/awscli-0.7.0-py2.7.egg/EGG-INFO/scripts/zsh_complete.sh
 
-	# virtualenvwrapper
-	export WORKON_HOME="$HOME/.virtualenvs"
-	export PROJECT_HOME="$HOME/Projects/python"
-	source /usr/local/bin/virtualenvwrapper.sh
 fi
+
+# rbenv
+export PATH="$HOME/.rbenv/shims:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# pyenv
+export PATH="$HOME/.pyenv/shims:$PATH"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
