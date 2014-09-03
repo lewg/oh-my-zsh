@@ -45,7 +45,7 @@ ZSH_THEME="blinks"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git rvm gem mysql autojump knife node npm vagrant python virtualenv ssh-agent)
+plugins=(git gem mysql autojump knife node npm vagrant python virtualenv ssh-agent docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,6 +80,9 @@ if test "$VENDOR" = "apple"; then
 
 	# AWS
 	# source /Library/Python/2.7/site-packages/awscli-0.7.0-py2.7.egg/EGG-INFO/scripts/zsh_complete.sh
+
+	# Default Vagrant Docker
+	export DOCKER_HOST=tcp://127.0.0.1:2375
 
 fi
 
