@@ -112,5 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias fig="docker-compose"
+
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/lew/.gvm/bin/gvm-init.sh" ]] && source "/Users/lew/.gvm/bin/gvm-init.sh"
