@@ -10,9 +10,9 @@ tell application "System Events"
 		set size of window 1 to {900, 700}
 		set position of window 1 to {40, 160}
 	end tell
-	tell process "Mail"
+	tell process "Microsoft Outlook"
 		activate
-		set size of window 1 to {1000, 800}
+		set size of window 1 to {1200, 850}
 		set position of window 1 to {0, 0}
 	end tell
 end tell
