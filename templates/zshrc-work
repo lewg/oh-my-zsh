@@ -58,12 +58,6 @@ plugins=(git gem mysql autojump
 alias knife='nocorrect knife'
 alias j='nocorrect j'
 
-# Set Env
-if [[ $(docker-machine status) = *"Running"* ]]
-then
-	eval $(docker-machine env)
-fi
-
 # Go
 export GOPATH="$HOME/Projects/go"
 export GOBIN=$GOPATH/bin
