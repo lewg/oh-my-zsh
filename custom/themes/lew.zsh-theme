@@ -15,6 +15,12 @@ function my_current_ruby() {
   echo "💎  %{%F{red}%}$(current_ruby)%{%f%}"
 }
 
+function my_current_venv() {
+  if [[ -n ${VIRTUAL_ENV} ]]; then
+    echo " ${wall} 🐍 %{%F{green}%}$(virtualenv_prompt_info)%{%f%}"
+  fi
+}
+
 function current_docker() {
 	if [[ $DOCKER_HOST ]]; then
 		echo " ${wall} 🛥  $DOCKER_MACHINE_NAME"
@@ -49,7 +55,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY="🔺 "
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 PROMPT='%{%f%k%b%}
-%{%K{${bkg}}%}$(git_prompt_info)$(my_current_ruby)$(current_docker)$(current_openstack)$(current_deploy_env)%E%{%f%k%b%}
+%{%K{${bkg}}%}$(git_prompt_info)$(my_current_ruby)$(my_current_venv)$(current_docker)$(current_openstack)$(current_deploy_env)%E%{%f%k%b%}
 %{%K{${bkg}}%B%F{green}%}%n%{%B%F{blue}%}@%{%B%F{cyan}%}%m%{%B%F{green}%} %{%b%F{yellow}%K{${bkg}}%}%~%{%B%F{green}%}%E%{%f%k%b%}
 %{%K{${bkg}}%}$(_prompt_char)%{%K{${bkg}}%} %#%{%f%k%b%} '
 
