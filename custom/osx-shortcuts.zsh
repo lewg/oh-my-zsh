@@ -2,7 +2,7 @@
 if test "$VENDOR" = "apple"; then
 
 	# Flush DNS
-	alias flushdns="sudo killall -HUP mDNSResponder"
+	alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 
 	# LS USB
 	alias lsusb='system_profiler SPUSBDataType'
@@ -12,5 +12,5 @@ if test "$VENDOR" = "apple"; then
 
 	# Launch a few of the regulars
 	alias helo='osascript ~ZSH_CUSTOM/Launch-Apps.applescript'
-	
+
 fi
