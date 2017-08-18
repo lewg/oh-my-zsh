@@ -58,6 +58,7 @@ plugins=(git gem mysql autojump
 alias knife='nocorrect knife'
 alias j='nocorrect j'
 
+
 # Go
 export GOPATH="$HOME/Projects/go"
 export GOBIN=$GOPATH/bin
@@ -81,6 +82,9 @@ if test "$VENDOR" = "apple"; then
 
 fi
 
+# Personal Path
+[[ -d "$HOME/bin" ]] && export PATH="$HOME/bin:$PATH"
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,11 +92,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='/usr/local/bin/atom --wait'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -110,9 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias fig="docker-compose"
-alias deploy_dev="export DEPLOY_ENV=dev"
-alias deploy_qa="export DEPLOY_ENV=qa"
-alias deploy_stage="export DEPLOY_ENV=stage"
-alias deploy_prod="export DEPLOY_ENV=prod"
 alias wrench="bundle exec wrench"
 alias ldap-agent="bundle exec ldap-agent"
+
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
