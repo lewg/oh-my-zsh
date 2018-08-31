@@ -71,6 +71,9 @@ source $HOME/.github/tokens.sh
 export OS_PRIVATE_KEY_PATH="~/.ssh/id_rsa"
 export OS_KEY_NAME="lgoett200"
 
+# Vault
+export VAULT_ADDR=https://vault-ch.autobahn.comcast.com:8200
+
 # Are we on a mac?
 if test "$VENDOR" = "apple"; then
 
@@ -95,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='/usr/local/bin/atom --wait'
+  export EDITOR='/usr/local/bin/code --wait'
 fi
 
 # Compilation flags
@@ -117,4 +120,4 @@ alias fig="docker-compose"
 alias wrench="bundle exec wrench"
 alias ldap-agent="bundle exec ldap-agent"
 
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
