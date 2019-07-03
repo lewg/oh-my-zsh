@@ -52,7 +52,8 @@ plugins=(git gem mysql autojump
 
 # Customize to your needs...
 # User configuration
-
+export AWS_PROFILE=saml
+export AWS_REGION=us-east-1
 
 # don't autocorrect for knife
 alias knife='nocorrect knife'
