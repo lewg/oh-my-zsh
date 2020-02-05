@@ -45,8 +45,8 @@ ZSH_THEME="lew"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git gem mysql autojump
-	knife node npm vagrant python virtualenv
+plugins=(git gem autojump
+	node npm vagrant python virtualenv
 	ssh-agent docker colorize golang rbenv
 	brew docker-compose bundler terraform)
 
@@ -118,7 +118,5 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias fig="docker-compose"
-alias wrench="bundle exec wrench"
-alias ldap-agent="bundle exec ldap-agent"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
